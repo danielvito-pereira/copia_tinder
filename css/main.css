@@ -174,5 +174,62 @@ body {
   font-style: normal;
   font-display: swap;
 }
+.header {
+  width: 100%;
+  padding: 1em;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header_esq {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.header_h1 {
+  margin: 0 1em 0 0;
+}
+
+.header_ul {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.header_li {
+  margin: 0 0.5em 0 0;
+}
+
+.header_svg {
+  margin: 0 0.5em 0 0;
+}
+
+.header_btn {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.header_menu {
+  display: none;
+  width: 2em;
+  height: 2em;
+  background-color: red;
+}
+
+@media (min-width: 760px) {
+  .header_nav, .header_ul {
+    display: none;
+  }
+  .header_menu {
+    display: flex;
+  }
+}
 
 /*# sourceMappingURL=main.css.map */
