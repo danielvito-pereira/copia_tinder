@@ -188,6 +188,13 @@ body {
   flex-flow: row nowrap;
   align-items: center;
   justify-content: space-between;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  color: white;
+  font-size: 1.2em;
+  font-family: var(--tipo-bold);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%);
 }
 
 .header_esq {
@@ -199,6 +206,14 @@ body {
 
 .header_h1 {
   margin: 0 1em 0 0;
+}
+
+.header_img {
+  width: 9.7em;
+}
+
+.header_g {
+  fill: white;
 }
 
 .header_ul {
@@ -232,15 +247,37 @@ body {
 /*DESLIZAR*/
 .deslizar {
   width: 100%;
-  min-height: 90vh;
+  min-height: 95vh;
+  background: url(../assets/bac_tinder.jpg) center/cover fixed;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
   justify-content: center;
+  position: relative;
+  color: white;
+  font-family: var(--tipo-bold);
+}
+.deslizar::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .deslizar_h2 {
   margin: 0 0 1em 0;
+  position: relative;
+  z-index: 2;
+  font-size: 4em;
+}
+
+.deslizar_btn {
+  position: relative;
+  z-index: 2;
 }
 
 /*TESTEMUHNOS*/
@@ -269,6 +306,75 @@ body {
   padding: 0 0 1em;
   margin: 0 0 1em;
   border-bottom: 1px solid grey;
+  position: relative;
+}
+.testemunho_names::after {
+  content: '"';
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 4em;
+  font-family: "Courier New", Courier, monospace;
+}
+
+/*footer*/
+.legal {
+  margin: 0 0 1em;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+  gap: 1em;
+}
+
+.app {
+  margin: 0 0 1em;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.app_h2 {
+  margin: 0 1em 0 0;
+}
+
+.app_ul {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.app_li {
+  margin: 0 1em 0 0;
+}
+
+.footer_claim {
+  margin: 0 0 1em;
+}
+
+.footer_sub {
+  border-top: 1px solid gray;
+  padding-top: 1em;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.faqs {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.faqs_li {
+  display: flex;
+}
+.faqs_li::after {
+  content: "/";
+  display: block;
+  margin: 0 1em;
 }
 
 @media (max-width: 760px) {
@@ -277,6 +383,12 @@ body {
   }
   .header_menu {
     display: flex;
+  }
+  .testemunhos_slider {
+    width: 600%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: unset;
   }
 }
 
