@@ -1,5 +1,16 @@
 @import 'reset' , 'mixins' , 'keyframes' , 'font';
 
+
+
+/*GLOBAIS*/
+.main{
+
+}
+.wrapper{
+  max-width: 1200px;
+  margin: auto;
+}
+/*HEADER*/
 .header{
   width: 100%;
   padding: 1em;
@@ -39,7 +50,6 @@
   margin: 0 .5em 0 0;
 }
 .-btns{
-
 }
 .header_btn{  
   display: flex;
@@ -47,16 +57,73 @@
   align-items: center;
   justify-content:center;
 }
-
-
 .header_menu{
   display:none;
   width: 2em;
   height: 2em;
-  background-color: red;
 }
 
-@media (min-width: 760px) {
+
+/*DESLIZAR*/
+.deslizar{
+  width: 100%;
+  min-height:90vh;
+
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+}
+.deslizar_h2{
+  margin: 0 0 1em 0;
+}
+.deslizar_btn{
+
+}
+
+/*TESTEMUHNOS*/
+
+.testemunhos{
+  padding: 5vh 0;
+}
+.testemunhos_wrapper{
+  overflow: hidden;
+}
+.testemunhos_slider{
+  width: 200%;
+  display: grid;
+  grid-template-columns: repeat(6,1fr);
+  gap: 1em;
+}
+.testemunho_slide{
+  padding: 1.5em;
+  border-radius: 0.5em;
+  border: 1px solid grey;
+}
+.testemunho_names{
+  padding: 0 0 1em;
+  margin: 0 0 1em;
+  border-bottom: 1px solid grey;
+}
+.testemunho_p{}
+.testemunho_slide{}
+.testemunho_names{}
+.testemunho_p{}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 760px) {
   .header_nav , .header_ul{
     display: none;
   }
@@ -64,3 +131,5 @@
     display:flex;
   }
 }
+
+
